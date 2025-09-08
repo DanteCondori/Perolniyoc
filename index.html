@@ -369,17 +369,17 @@
       <div class="section-container">
         <h2>Reservas</h2>
         <form id="reserva-form" class="reserva-form" name="reservas" method="POST" data-netlify="true" netlify-honeypot="bot-field">
-          
+    
           <!-- Campo para protección anti-spam -->
           <p class="hidden">
             <label>No llenar esto: <input name="bot-field"></label>
           </p>
-          
+    
           <!-- Identificador obligatorio para Netlify -->
           <input type="hidden" name="form-name" value="reservas">
     
-          <!-- Campo oculto que usaremos como "título" -->
-          <input type="hidden" name="title" value="">
+          <!-- Campo oculto para personalizar el asunto -->
+          <input type="hidden" name="subject" value="Nueva reserva">
     
           <div class="form-group">
             <label for="nombre">Nombre Completo</label>
@@ -425,13 +425,13 @@
           <div class="form-group">
             <label>Servicio</label>
             <div class="checkbox-group">
-                <label><input type="checkbox" name="servicio[]" value="restaurante"> Restaurante</label>
-                <label><input type="checkbox" name="servicio[]" value="bungalow"> Bungalow</label>
-                <label><input type="checkbox" name="servicio[]" value="evento"> Evento</label>
-                <label><input type="checkbox" name="servicio[]" value="camping"> Camping</label>
+              <label><input type="checkbox" name="servicio[]" value="restaurante"> Restaurante</label>
+              <label><input type="checkbox" name="servicio[]" value="bungalow"> Bungalow</label>
+              <label><input type="checkbox" name="servicio[]" value="evento"> Evento</label>
+              <label><input type="checkbox" name="servicio[]" value="camping"> Camping</label>
             </div>
             <small>Puedes seleccionar uno o varios servicios.</small>
-        </div>
+          </div>
     
           <div class="form-group">
             <label for="mensaje">Mensaje Adicional</label>
@@ -442,17 +442,35 @@
         </form>
       </div>
     </section>
-
-    <!-- Script para que el título del submission sea el nombre -->
+    
+    <!-- Script para personalizar el asunto y mostrar alerta -->
     <script>
     document.addEventListener("DOMContentLoaded", function () {
       const form = document.querySelector("form[name='reservas']");
-      form.addEventListener("submit", function () {
-        const nombre = form.querySelector("input[name='nombre']").value;
-        form.querySelector("input[name='title']").value = nombre;
+      
+      form.addEventListener("submit", function (e) {
+        // Personalizar el asunto del envío
+        const nombre = form.querySelector("input[name='nombre']").value.trim();
+        const email = form.querySelector("input[name='email']").value.trim();
+        const subjectField = form.querySelector("input[name='subject']");
+        
+        if (nombre) {
+          subjectField.value = `Nueva reserva de ${nombre}`;
+        } else {
+          subjectField.value = `Nueva reserva (${email})`;
+        }
+    
+        // Mostrar alerta de confirmación
+        alert("✅ Tu reserva fue enviada con éxito. Te contactaremos pronto.");
+        
+        // Resetear formulario después del envío
+        setTimeout(() => {
+          form.reset();
+        }, 200);
       });
     });
     </script>
+
 
     <!-- Contacto -->
     <section id="contacto" class="section bg-light">
@@ -722,6 +740,7 @@
     </script>
 </body>
 </html>
+
 
 
 
