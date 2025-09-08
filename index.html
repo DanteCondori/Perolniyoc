@@ -424,14 +424,15 @@
           </div>
     
           <div class="form-group">
-            <label for="servicio">Servicio</label>
-            <select id="servicio" name="servicio">
-              <option value="restaurante">Restaurante</option>
-              <option value="bungalow">Bungalow</option>
-              <option value="evento">Evento</option>
-              <option value="camping">Camping</option>
-            </select>
-          </div>
+            <label>Servicio</label>
+            <div class="checkbox-group">
+                <label><input type="checkbox" name="servicio[]" value="restaurante"> Restaurante</label>
+                <label><input type="checkbox" name="servicio[]" value="bungalow"> Bungalow</label>
+                <label><input type="checkbox" name="servicio[]" value="evento"> Evento</label>
+                <label><input type="checkbox" name="servicio[]" value="camping"> Camping</label>
+            </div>
+            <small>Puedes seleccionar uno o varios servicios.</small>
+        </div>
     
           <div class="form-group">
             <label for="mensaje">Mensaje Adicional</label>
@@ -681,6 +682,7 @@
     </script>
 </body>
 </html>
+
 
 
 
