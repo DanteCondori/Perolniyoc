@@ -5,18 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Casa Campestre Perolniyoc | Valle Sagrado del Cusco</title>
     <!-- Favicon -->
-    <link rel="icon" href="img/logo.png" type="image/png">
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="icon" href="images/logo.png" type="image/png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;600&display=swap" rel="stylesheet">
     <!-- Google tag (gtag.js) -->
+     <link rel="stylesheet" href="css/styles.css">
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-R1DTNGCPCQ"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
-    
       gtag('config', 'G-R1DTNGCPCQ');
     </script>
 </head>
@@ -24,7 +23,7 @@
     <!-- Barra de Navegación -->
     <nav class="navbar">
         <div class="logo-container">
-            <img src="img/logo.png" alt="Logo del restaurante" class="logo">
+            <img src="images/logo.png" alt="Logo del restaurante" class="logo">
         </div>
         <ul class="nav-links">
             <li><a href="#inicio">Inicio</a></li>
@@ -42,53 +41,71 @@
 
     <!-- Sección Hero (Inicio) con Carrusel -->
 <section id="inicio" class="hero">
-    <div class="hero-carousel">
-        <!-- Slide 1 -->
-        <div class="hero-slide active" style="background-image: url('img/Valle_Sagrado.jpg')">
-            <div class="hero-overlay"></div>
-            <div class="hero-content"><br><br>
-                <h1>Casa Campestre Perolniyoc</h1>
-                <p>Experiencia gastronómica y hospedaje en el corazón del Valle Sagrado</p>
-                <a href="#reservas" class="btn">Reservar Ahora</a>
-            </div>
-        </div>
-        
-        <!-- Slide 2 -->
-        <div class="hero-slide" style="background-image: url('img/Cuy_Horno.jpg')">
-            <div class="hero-overlay"></div>
-            <div class="hero-content"><br><br>
-                <h1>Especialistas en Cuy Andino</h1>
-                <p>Disfruta nuestro tradicional cuy al horno y chactado</p>
-                <a href="#menu" class="btn">Ver Menú</a>
-            </div>
-        </div>
-        
-        <!-- Slide 3 -->
-        <div class="hero-slide" style="background-image: url('img/Pachamanca.jpg')">
-            <div class="hero-overlay"></div>
-            <div class="hero-content"><br><br>
-                <h1>Bungalows con Vista al Valle</h1>
-                <p>Hospedaje rústico con todas las comodidades</p>
-                <a href="#servicios" class="btn">Nuestros Servicios</a>
-            </div>
-        </div>
-        <!-- Slide 4 -->
-        <div class="hero-slide" style="background-image: url('img/Bungalows.jpg')">
-            <div class="hero-overlay"></div>
-            <div class="hero-content"><br><br>
-                <h1>Bungalows con Vista al Valle</h1>
-                <p>Hospedaje rústico con todas las comodidades</p>
-                <a href="#servicios" class="btn">Nuestros Servicios</a>
-            </div>
-        </div>
+  <div class="hero-carousel">
+
+    <!-- Slide 1 -->
+    <div class="hero-slide active" style="background-image: url('images/Valle_Sagrado.jpg')">
+      <div class="hero-overlay"></div>
+      <div class="hero-content">
+        <h1>Casa Campestre Perolniyoc</h1>
+        <p>Experiencia gastronómica y hospedaje en el corazón del Valle Sagrado</p>
+        <a href="#reservas" class="btn">Reservar Ahora</a>
+      </div>
     </div>
-    
-    <!-- Controles del Carrusel -->
-    <button class="carousel-control prev" aria-label="Slide anterior">&#10094;</button>
-    <button class="carousel-control next" aria-label="Slide siguiente">&#10095;</button>
-    
-    <!-- Indicadores -->
-    <div class="carousel-indicators"></div>
+
+    <!-- Slide 2 -->
+    <div class="hero-slide" style="background-image: url('images/Cuy_Horno.jpg')">
+      <div class="hero-overlay"></div>
+      <div class="hero-content">
+        <h1>Especialistas en Cuy Andino</h1>
+        <p>Disfruta nuestro tradicional cuy al horno y chactado</p>
+        <a href="#menu" class="btn">Ver Menú</a>
+      </div>
+    </div>
+
+    <!-- Slide 3 -->
+    <div class="hero-slide" style="background-image: url('images/bungalows.jpg')">
+      <div class="hero-overlay"></div>
+      <div class="hero-content">
+        <h1>Bungalows con Vista al Valle</h1>
+        <p>Hospedaje rústico con todas las comodidades</p>
+        <a href="#servicios" class="btn">Nuestros Servicios</a>
+      </div>
+    </div>
+
+    <!-- Slide 4 -->
+    <div class="hero-slide" style="background-image: url('images/eventos.jpg')">
+      <div class="hero-overlay"></div>
+      <div class="hero-content">
+        <h1>Eventos y Celebraciones</h1>
+        <p>Te ofrecemos ambientes exclusivos, atención personalizada y la mejor cocina andina para que tu celebración sea realmente memorable.</p>
+        <a href="#reservas" class="btn">Solicitar Información</a>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Controles del Carrusel -->
+  <button class="carousel-control prev" aria-label="Slide anterior">&#10094;</button>
+  <button class="carousel-control next" aria-label="Slide siguiente">&#10095;</button>
+
+  <!-- Indicadores -->
+  <div class="carousel-indicators"></div>
+</section>
+
+    <!-- PRIMERA SECCIÓN DE LANDING: Después del Hero -->
+<section class="cta-section">
+    <div class="cta-content">
+        <h2>¿Buscas el lugar perfecto para tu evento especial?</h2>
+        <p>En Casa Campestre Perolniyoc ofrecemos espacios únicos para celebrar momentos inolvidables con la mejor gastronomía andina.</p>
+        
+        <div class="cta-buttons">
+            <a href="#reservas" class="btn">Solicitar Información</a>
+            <a href="#suscribete" class="btn btn-secondary">¡Suscríbete y recibe 50% de descuento en tu primera visita!</a>
+        </div>
+        
+        <p class="offer-note">* Solo para nuevos suscriptores. Sujeto a disponibilidad.</p>
+    </div>
 </section>
 
     <!-- Sección Nosotros -->
@@ -101,13 +118,26 @@
                     <p>Nuestro compromiso es ofrecer una experiencia auténtica que combine la excelencia culinaria con la belleza natural de nuestro entorno.</p>
                     <p>Con más de 10 años de experiencia, hemos creado un espacio acogedor donde los visitantes pueden disfrutar de la rica cultura peruana a través de nuestros platos y servicios.</p> 
                     <p>Contamos con amplias áreas al aire libre ideales para disfrutar en familia o con amigos: zonas verdes, espacios recreativos y lugares especialmente pensados para actividades culturales y de esparcimiento. Al caer la noche, nada mejor que compartir historias alrededor de nuestras fogatas, bajo un cielo estrellado del Valle Sagrado.</p>
-                    </p>
                 </div>
                 <div class="nosotros-img">
-                    <img src="img/Evento_Grupal.jpg" alt="Pachamanqueada">
+                    <img src="images/Evento_Grupal.jpg" alt="Imagen de Casa Campestre Perolniyoc">
                 </div>
             </div>
         </div>
+    </section>
+
+    <!-- SEGUNDA SECCIÓN DE LANDING: Después de Nosotros -->
+    <section class="cta-section">
+        <div class="cta-content">
+            <h2>¿Planeas una pachamanca o parrillada?</h2>
+            <p>Tenemos los mejores espacios y servicios para que disfrutes de una auténtica experiencia culinaria andina.</p>
+            <div class="cta-buttons">
+                <a href="#contacto" class="btn">Consultar Disponibilidad</a>
+                <a href="#suscribete" class="btn btn-secondary">¡Suscríbete y recibe 50% de descuento en tu primera visita!</a>
+            </div>
+            <p class="offer-note">* Solo para nuevos suscriptores. Sujeto a disponibilidad.</p>
+        </div>
+        
     </section>
 
     <!-- Sección Servicios -->
@@ -149,7 +179,20 @@
         </div>
     </section>
 
-        <!-- Sección Menú (Destacando el cuy) -->
+    <!-- TERCERA SECCIÓN DE LANDING: Después de Servicios -->
+    <section class="cta-section">
+        <div class="cta-content">
+            <h2>¿Necesitas hospedaje en el Valle Sagrado?</h2>
+            <p>Nuestros bungalows te ofrecen comodidad y una vista espectacular a precios especiales.</p>
+            <div class="cta-buttons">
+                <a href="#reservas" class="btn">Ver Disponibilidad</a>
+                <a href="#suscribete" class="btn btn-secondary">¡Suscríbete y recibe 50% de descuento en tu primera visita!</a>
+            </div>
+            <p class="offer-note">* Solo para nuevos suscriptores. Sujeto a disponibilidad.</p>
+        </div>
+    </section>
+
+    <!-- Sección Menú (Destacando el cuy) -->
     <section id="menu" class="section">
         <div class="section-container">
             <h2>Nuestro Menú Estrella</h2>
@@ -253,12 +296,10 @@
                         <p>Infusiones de hierbas andinas como muña, cedrón y anís.</p>
                         <span class="price">S/ 6.00</span> 
                     </div>
-                    <!-- Items de bebidas -->
                 </div>
             </div>
         </div>
     </section>
-
 
     <!-- Galería -->
     <section id="galeria" class="section bg-light">
@@ -266,60 +307,58 @@
             <h2>Galería</h2>
             <div class="gallery-grid">
                 <div class="gallery-item">
-                    <img src="img/cuy_al_horno.jpg" alt="Plato de cuy al horno">
+                    <img src="images/cuy_al_horno.jpg" alt="Plato de Cuy al Horno">
                     <div class="gallery-overlay">
                         <p>Plato de Cuy al Horno</p>
                     </div>
                 </div>
-                <!-- Más items de galería -->
                 <div class="gallery-item">
-                    <img src="img/Chicharron_Cuy.jpg" alt="Plato de chicharrón de Cuy">
+                    <img src="images/Chicharron_Cuy.jpg" alt="Plato de Chicharrón de Cuy">
                     <div class="gallery-overlay">
                         <p>Chicharrón de Cuy</p>
                     </div>
                 </div>
                 <div class="gallery-item">
-                    <img src="img/Cuy_Chactado.jpg" alt="Plato de Cuy Chactado">
+                    <img src="images/Cuy_Chactado.jpg" alt="Plato de Cuy Chactado">
                     <div class="gallery-overlay">
                         <p>Cuy Chactado</p>
                     </div>
                 </div>
                 <div class="gallery-item">
-                    <img src="img/Zona_Entretenimiento.jpg" alt="Zona de Fogatas y entretenimiento">
+                    <img src="images/Zona_Entretenimiento.jpg" alt="Zona de entretenimiento">
                     <div class="gallery-overlay">
                         <p>Zona de fogatas - Parrillas y Pachamanca</p>
                     </div>
                 </div>
                 <div class="gallery-item">
-                    <img src="img/Pachamanca.jpg" alt="Zona para pachamanca y otros">
+                    <img src="images/pachamanca.jpg" alt="Pachamanca">
                     <div class="gallery-overlay">
                         <p>Pachamanca</p>
                     </div>
                 </div>
                 <div class="gallery-item">
-                    <img src="img/Bungalows.jpg" alt="Bungalows">
+                    <img src="images/Bungalows.jpg" alt="Bungalows">
                     <div class="gallery-overlay">
                         <p>Bungalows</p>
                     </div>
                 </div>
                 <div class="gallery-item">
-                    <img src="img/Atardecer_Valle_Sagrado.jpg" alt="Vista al atardecer del Valle Sagrado">
+                    <img src="images/Atardecer_Valle_Sagrado.jpg" alt="Vista al atardecer del Valle Sagrado">
                     <div class="gallery-overlay">
                         <p>Vista al atardecer del Valle Sagrado</p>
                     </div>
                 </div>
                 <div class="gallery-item">
-                    <img src="img/eventos.jpg" alt="Area para eventos">
+                    <img src="images/eventos.jpg" alt="Area para eventos">
                     <div class="gallery-overlay">
                         <p>Area para eventos</p>
                     </div>
                 </div>
                 <div class="gallery-item">
-                    <img src="img/Area_Comedor.jpg" alt="Area del comedor">
+                    <img src="images/Area_Comedor.jpg" alt="Area de comedor">
                     <div class="gallery-overlay">
                         <p>Area de Comedor</p>
                     </div>
-                </div>
             </div>
         </div>
     </section>
@@ -328,7 +367,15 @@
     <section id="reservas" class="section">
         <div class="section-container">
             <h2>Reservas</h2>
-            <form id="reserva-form" class="reserva-form" action="procesar_reserva.php" method="POST">
+            <form id="reserva-form" class="reserva-form" name="reservas" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+                <!-- Campo para protección anti-spam -->
+                <p class="hidden">
+                    <label>No llenar esto: <input name="bot-field"></label>
+                </p>
+                <input type="hidden" name="form-name" value="reservas">
+                <p class="hidden">
+                    <label>No llenar esto: <input name="bot-field"></label>
+                </p>
                 <div class="form-group">
                     <label for="nombre">Nombre Completo</label>
                     <input type="text" id="nombre" name="nombre" required>
@@ -363,7 +410,6 @@
                             <option value="8">8 personas</option>
                             <option value="9">9 personas</option>
                             <option value="10">10 personas</option>
-                            <!-- Más opciones -->
                         </select>
                     </div>
                 </div>
@@ -378,7 +424,7 @@
                 </div>
                 <div class="form-group">
                     <label for="mensaje">Mensaje Adicional</label>
-                    <textarea id="mensaje" name="mensaje" rows="4"></textarea>
+                    <textarea id="mensaje" name="mensaje" placeholder="Escribe aquí tus comentarios o solicitudes especiales" rows="4"></textarea>
                 </div>
                 <button type="submit" class="btn">Enviar Reserva</button>
             </form>
@@ -388,22 +434,32 @@
     <!-- Contacto -->
     <section id="contacto" class="section bg-light">
         <div class="section-container">
-            <h2>Contacto</h2>
+            <h2>Información de Contacto</h2>
             <div class="contacto-grid">
                 <div class="contacto-info">
-                    <h3>Información de Contacto</h3>
-                    <p><i class="fas fa-map-marker-alt"></i> Pachar - Valle Sagrado, Cusco, Perú</p>
-                    <p><i class="fas fa-phone"></i> +51 984 809 684</p>
-                    <p><i class="fas fa-envelope"></i> info@qperolniyoc.com</p>
+                    <p class="contact-address">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <a href="https://maps.app.goo.gl/gRuKEaeYab2SG2dN9" target="_blank">Pachar - Valle Sagrado, Cusco, Perú</a>
+                    </p>
+
+                    <p class="contact-phone">
+                    <i class="fas fa-phone"></i>
+                    <a href="tel:+51984809684" target="_blank">+51 984 809 684</a>
+                    </p>
+
+                    <p class="contact-email">
+                    <i class="fas fa-envelope"></i>
+                    <a href="mailto:dcondori.a06@gmail.com">info@qperolniyoc.com</a>
+                    </p>
                     
                     <h3>Horario de Atención</h3>
-                    <p>Restaurante: 10:00 am - 9:00 pm</p>
-                    <p>Recepción: 24 horas</p>
+                    <li>Restaurante: 10:00 am - 9:00 pm</li>
+                    <li>Recepción: 24 horas</li>
                     
                     <div class="social-links">
-                        <a href="https://www.facebook.com/quintacuyeria.perolniyoc"><i class="fab fa-facebook"></i></a>
-                        <a href="https://www.instagram.com/biodiversidad75/?igsh=MWxoYjUzYW0yNHl3dg%3D%3D#"><i class="fab fa-instagram"></i></a>
-                        <a href="https://wa.me/51984809684"><i class="fab fa-whatsapp"></i></a>
+                        <a href="https://www.facebook.com/quintacuyeria.perolniyoc" target="_blank"><i class="fab fa-facebook"></i></a>
+                        <a href="https://www.instagram.com/biodiversidad75/?igsh=MWxoYjUzYW0yNHl3dg%3D%3D#" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="https://wa.me/51984809684?text=¡Hola!%20Le%20escribo%20desde%20la%20web%20de%20Casa%20Campestre%20Perolniyoc.%20Quisiera%20consultar%20sobre%20promociones%20y%20reservas." target="_blank"><i class="fab fa-whatsapp"></i></a>
                     </div>
                 </div>
                 <div class="contacto-mapa">
@@ -417,7 +473,7 @@
     <footer class="footer">
         <div class="footer-content">
             <div class="footer-logo">
-                <img src="img/logo.png" alt="Logo del restaurante">
+                <img src="images/logo.png" alt="Logo del restaurante">
             </div>
             <div class="footer-links">
                 <h3>Enlaces Rápidos</h3>
@@ -428,29 +484,204 @@
                     <li><a href="#reservas">Reservas</a></li>
                 </ul>
             </div>
-            <div class="footer-newsletter">
+            <div id="suscribete" class="footer-newsletter">
                 <h3>Suscríbete</h3>
-                <p>Recibe nuestras promociones y eventos especiales.</p>
-                <form class="newsletter-form">
-                    <input type="email" placeholder="Tu correo electrónico">
-                    <button type="submit">Suscribirse</button>
+                <p>¡Suscríbete y descubre ofertas especiales como el 50% de descuento!</p>
+                <form class="newsletter-form" name="newsletter" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+                    <input type="hidden" name="form-name" value="newsletter">
+                    <p class="hidden">
+                        <label>No llenar esto: <input name="bot-field"></label>
+                    </p>
+                    <input type="email" name="email" placeholder="Tu correo electrónico" required>
+                    <button type="submit" class="btn-newsletter">Suscribirse</button>
                 </form>
             </div>
         </div>
         <div class="footer-bottom">
-            <p>&copy; 2025 Quinta Campestre Perolniyoc. Todos los derechos reservados.</p>
+            <p>&copy; 2025 Casa Campestre Perolniyoc. Todos los derechos reservados.</p>
             <p>Cardenas - Condori - Melo</p>
         </div>
     </footer>
 
-    <script src="script.js"></script>
+    <!-- WhatsApp Float -->
+    <a href="https://wa.me/51984809684?text=¡Hola!%20Vi%20su%20página%20web%20y%20me%20gustaría%20consultar%20sobre%20las%20promociones%20y%20cómo%20hacer%20una%20reserva." class="whatsapp-float" target="_blank" aria-label="Contactar por WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+</a>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Menú hamburguesa
+            const burger = document.querySelector('.burger');
+            const navLinks = document.querySelector('.nav-links');
+            
+            burger.addEventListener('click', function() {
+                navLinks.classList.toggle('active');
+            });
+            
+            // Smooth scrolling para enlaces de navegación
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    
+                    const targetId = this.getAttribute('href');
+                    if (targetId === '#') return;
+                    
+                    const targetElement = document.querySelector(targetId);
+                    if (targetElement) {
+                        // Cerrar el menú móvil si está abierto
+                        navLinks.classList.remove('active');
+                        
+                        window.scrollTo({
+                            top: targetElement.offsetTop - 80, // Ajuste para la navbar fija
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+            
+            // Tabs del menú
+            const tabBtns = document.querySelectorAll('.tab-btn');
+            const tabPanes = document.querySelectorAll('.tab-pane');
+            
+            tabBtns.forEach((btn, index) => {
+                btn.addEventListener('click', function() {
+                    // Remover clase active de todos los botones y paneles
+                    tabBtns.forEach(btn => btn.classList.remove('active'));
+                    tabPanes.forEach(pane => pane.classList.remove('active'));
+                    
+                    // Agregar clase active al botón y panel clickeado
+                    this.classList.add('active');
+                    tabPanes[index].classList.add('active');
+                });
+            });
+            
+            // Carrusel Hero
+            function initCarousel() {
+                const slides = document.querySelectorAll('.hero-slide');
+                const indicatorsContainer = document.querySelector('.carousel-indicators');
+                const prevBtn = document.querySelector('.carousel-control.prev');
+                const nextBtn = document.querySelector('.carousel-control.next');
+                
+                let currentSlide = 0;
+                let slideInterval;
+                const intervalTime = 5000; // 5 segundos
+                
+                // Crear indicadores
+                slides.forEach((slide, index) => {
+                    const indicator = document.createElement('div');
+                    indicator.classList.add('carousel-indicator');
+                    if (index === 0) indicator.classList.add('active');
+                    indicator.addEventListener('click', () => goToSlide(index));
+                    indicatorsContainer.appendChild(indicator);
+                });
+                
+                const indicators = document.querySelectorAll('.carousel-indicator');
+                
+                // Función para ir a un slide específico
+                function goToSlide(n) {
+                    slides[currentSlide].classList.remove('active');
+                    indicators[currentSlide].classList.remove('active');
+                    
+                    currentSlide = (n + slides.length) % slides.length;
+                    
+                    slides[currentSlide].classList.add('active');
+                    indicators[currentSlide].classList.add('active');
+                    
+                    // Reiniciar el intervalo
+                    resetInterval();
+                }
+                
+                // Slide siguiente
+                function nextSlide() {
+                    goToSlide(currentSlide + 1);
+                }
+                
+                // Slide anterior
+                function prevSlide() {
+                    goToSlide(currentSlide - 1);
+                }
+                
+                // Iniciar intervalo automático
+                function startInterval() {
+                    slideInterval = setInterval(nextSlide, intervalTime);
+                }
+                
+                // Reiniciar intervalo
+                function resetInterval() {
+                    clearInterval(slideInterval);
+                    startInterval();
+                }
+                
+                // Event listeners
+                nextBtn.addEventListener('click', () => {
+                    nextSlide();
+                });
+                
+                prevBtn.addEventListener('click', () => {
+                    prevSlide();
+                });
+                
+                // Iniciar
+                startInterval();
+            }
+            
+            // Iniciar carrusel
+            initCarousel();
+            
+            // Animación al hacer scroll
+            const animateOnScroll = function() {
+                const elements = document.querySelectorAll('.servicio-card, .menu-item, .gallery-item');
+                
+                elements.forEach(element => {
+                    const elementPosition = element.getBoundingClientRect().top;
+                    const screenPosition = window.innerHeight / 1.2;
+                    
+                    if (elementPosition < screenPosition) {
+                        element.style.opacity = '1';
+                        element.style.transform = 'translateY(0)';
+                    }
+                });
+            };
+            
+            // Configurar elementos animados
+            document.querySelectorAll('.servicio-card, .menu-item, .gallery-item').forEach(element => {
+                element.style.opacity = '0';
+                element.style.transform = 'translateY(20px)';
+                element.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+            });
+            
+            window.addEventListener('scroll', animateOnScroll);
+            animateOnScroll(); // Ejecutar una vez al cargar la página
+            
+            // Manejar el formulario de suscripción
+            document.querySelector('.newsletter-form')?.addEventListener('submit', function(e) {
+                e.preventDefault();
+                const email = this.querySelector('input[type="email"]').value;
+                
+                // Validación simple
+                if (!validateEmail(email)) {
+                    alert('Por favor ingresa un email válido');
+                    return;
+                }
+                
+                // Mensaje de éxito
+                alert('¡Gracias por suscribirte! Accediste a un 50% de descuento en tu primera visita. Te contactaremos pronto. Gracias.');
+                this.reset();
+            });
+            
+            // Validación de email
+            function validateEmail(email) {
+                const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                return re.test(email);
+            }
+            
+            // Manejar el formulario de reservas (Netlify)
+            document.getElementById('reserva-form')?.addEventListener('submit', function() {
+                // Puedes agregar tracking de conversiones aquí
+                console.log('Reserva enviada, te llamaremos pronto. Gracias.');
+                // Google Analytics: gtag('event', 'reserva_enviada');
+            });
+        });
+    </script>
 </body>
-
 </html>
-
-
-
-
-
-
-
