@@ -516,19 +516,47 @@
             
               <form class="newsletter-form" name="newsletter" method="POST" data-netlify="true" netlify-honeypot="bot-field">
                 <input type="hidden" name="form-name" value="newsletter">
-                
-                <!-- Campo oculto anti-spam -->
+                <!-- Campo oculto para el asunto -->
+                <input type="hidden" name="subject" value="Nuevo suscriptor">
+            
+                <!-- Anti-spam -->
                 <p class="hidden">
                   <label>No llenar esto: <input name="bot-field"></label>
                 </p>
             
-                <!-- El PRIMER campo será el que Netlify use como asunto -->
-                <input type="email" name="Correo Electrónico" placeholder="Tu correo electrónico" required>
+                <input type="email" name="Correo Electrónico" id="email-suscriptor" placeholder="Tu correo electrónico" required>
                 <input type="text" name="Nombre Completo" placeholder="Tu nombre completo">
             
                 <button type="submit" class="btn-newsletter">Suscribirse</button>
               </form>
             </div>
+            
+            <script>
+            document.querySelector('.newsletter-form')?.addEventListener('submit', function(e) {
+              e.preventDefault(); // evita que recargue
+            
+              const form = e.target;
+              const data = new FormData(form);
+            
+              // ✅ Agregar el correo al asunto
+              const email = form.querySelector("#email-suscriptor").value;
+              data.set("subject", `Nuevo suscriptor: ${email}`);
+            
+              fetch("/", {
+                method: "POST",
+                body: data,
+              })
+              .then(() => {
+                alert('🎉 ¡Gracias por suscribirte! Accediste a un 50% de descuento en tu primera visita. Te contactaremos pronto.');
+                form.reset();
+              })
+              .catch(error => {
+                alert("❌ Hubo un problema al enviar tu suscripción, intenta nuevamente.");
+                console.error(error);
+              });
+            });
+            </script>
+
 
         </div>
         <!--Nombre de integrantes-->
@@ -689,19 +717,12 @@
             animateOnScroll(); // Ejecutar una vez al cargar la página
             
             // Alerta de suscripción
-            // Alerta de suscripción
-            document.querySelector('.newsletter-form')?.addEventListener('submit', function () {
-                const name = this.querySelector('input[name="name"]').value;
-                const email = this.querySelector('input[name="email"]').value;
-                
-                alert(`🎉 ¡Gracias ${name}! Te has suscrito con el correo ${email}.
-            Accediste a un 50% de descuento en tu primera visita. Te contactaremos pronto.`);
-                this.reset(); // limpia el formulario automáticamente
   });
         });
     </script>
 </body>
 </html>
+
 
 
 
