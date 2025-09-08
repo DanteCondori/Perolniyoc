@@ -512,24 +512,19 @@
             <!--Suscribete-->
 
             <div id="suscribete" class="footer-newsletter">
-                <h3>Suscríbete</h3>
-                <p>¡Suscríbete y descubre ofertas especiales como el 50% de descuento!</p>
-                <form class="newsletter-form"
-                    name="newsletter"
-                    method="POST"
-                    data-netlify="true"
-                    netlify-honeypot="bot-field">                   
-                    <!-- campo oculto para Netlify -->
-                    <input type="hidden" name="form-name" value="newsletter">
-                    <!-- honeypot (anti-spam) -->
-                    <p class="hidden">
-                    <label>No llenar esto: <input name="bot-field"></label>
-                    </p>
-                    <!-- campo de email -->
-                    <input type="email" name="email" placeholder="Tu correo electrónico" required>
-                    <button type="submit" class="btn-newsletter">Suscribirse</button>
-                </form>
+              <h3>Suscríbete</h3>
+              <p>¡Suscríbete y descubre ofertas especiales como el 50% de descuento!</p>
+              <form class="newsletter-form" name="newsletter" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+                <input type="hidden" name="form-name" value="newsletter">
+                <p class="hidden">
+                  <label>No llenar esto: <input name="bot-field"></label>
+                </p>
+                <input type="text" name="name" placeholder="Tu nombre completo" required>
+                <input type="email" name="email" placeholder="Tu correo electrónico" required>
+                <button type="submit" class="btn-newsletter">Suscribirse</button>
+              </form>
             </div>
+
         </div>
         <!--Nombre de integrantes-->
         <div class="footer-bottom">
@@ -689,14 +684,20 @@
             animateOnScroll(); // Ejecutar una vez al cargar la página
             
             // Alerta de suscripción
-            document.querySelector('.newsletter-form')?.addEventListener('submit', function() {
-                alert('🎉 ¡Gracias por suscribirte! Accediste a un 50% de descuento en tu primera visita. Te contactaremos pronto.');
+            // Alerta de suscripción
+            document.querySelector('.newsletter-form')?.addEventListener('submit', function () {
+                const name = this.querySelector('input[name="name"]').value;
+                const email = this.querySelector('input[name="email"]').value;
+                
+                alert(`🎉 ¡Gracias ${name}! Te has suscrito con el correo ${email}.
+            Accediste a un 50% de descuento en tu primera visita. Te contactaremos pronto.`);
                 this.reset(); // limpia el formulario automáticamente
-            });
+  });
         });
     </script>
 </body>
 </html>
+
 
 
 
