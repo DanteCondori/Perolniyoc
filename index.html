@@ -365,7 +365,6 @@
     </section>
 
     <!-- Reservas -->
-    <!-- Reservas -->
     <section id="reservas" class="section">
       <div class="section-container">
         <h2>Reservas</h2>
@@ -514,13 +513,19 @@
             <div id="suscribete" class="footer-newsletter">
               <h3>Suscríbete</h3>
               <p>¡Suscríbete y descubre ofertas especiales como el 50% de descuento!</p>
+            
               <form class="newsletter-form" name="newsletter" method="POST" data-netlify="true" netlify-honeypot="bot-field">
                 <input type="hidden" name="form-name" value="newsletter">
+                
+                <!-- Campo oculto anti-spam -->
                 <p class="hidden">
                   <label>No llenar esto: <input name="bot-field"></label>
                 </p>
-                <input type="text" name="name" placeholder="Tu nombre completo" required>
-                <input type="email" name="email" placeholder="Tu correo electrónico" required>
+            
+                <!-- El PRIMER campo será el que Netlify use como asunto -->
+                <input type="email" name="Correo Electrónico" placeholder="Tu correo electrónico" required>
+                <input type="text" name="Nombre Completo" placeholder="Tu nombre completo">
+            
                 <button type="submit" class="btn-newsletter">Suscribirse</button>
               </form>
             </div>
@@ -697,6 +702,7 @@
     </script>
 </body>
 </html>
+
 
 
 
