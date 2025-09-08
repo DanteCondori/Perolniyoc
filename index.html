@@ -497,7 +497,7 @@
     <footer class="footer">
         <div class="footer-content">
             <div class="footer-logo">
-                <img src="images/icon.png" alt="Logo del restaurante">
+                <img src="images/logo.png" alt="Logo del restaurante">
             </div>
             <div class="footer-links">
                 <h3>Enlaces Rápidos</h3>
@@ -508,30 +508,30 @@
                     <li><a href="#reservas">Reservas</a></li>
                 </ul>
             </div>
-            <div id="suscribete" class="footer-newsletter">
-              <h3>Suscríbete</h3>
-              <p>¡Suscríbete y descubre ofertas especiales como el 50% de descuento!</p>
-            
-              <form class="newsletter-form" 
-                    name="newsletter" 
-                    method="POST" 
-                    data-netlify="true" 
-                    netlify-honeypot="bot-field">
-            
-                <!-- Identificador obligatorio para Netlify -->
-                <input type="hidden" name="form-name" value="newsletter">
-            
-                <!-- Campo honeypot para bots -->
-                <p class="hidden">
-                  <label>No llenar esto: <input name="bot-field"></label>
-                </p>
-            
-                <input type="email" name="email" placeholder="Tu correo electrónico" required>
-                <button type="submit" class="btn-newsletter">Suscribirse</button>
-              </form>
-            </div>
 
+            <!--Suscribete-->
+
+            <div id="suscribete" class="footer-newsletter">
+                <h3>Suscríbete</h3>
+                <p>¡Suscríbete y descubre ofertas especiales como el 50% de descuento!</p>
+                <form class="newsletter-form"
+                    name="newsletter"
+                    method="POST"
+                    data-netlify="true"
+                    netlify-honeypot="bot-field">                   
+                    <!-- campo oculto para Netlify -->
+                    <input type="hidden" name="form-name" value="newsletter">
+                    <!-- honeypot (anti-spam) -->
+                    <p class="hidden">
+                    <label>No llenar esto: <input name="bot-field"></label>
+                    </p>
+                    <!-- campo de email -->
+                    <input type="email" name="email" placeholder="Tu correo electrónico" required>
+                    <button type="submit" class="btn-newsletter">Suscribirse</button>
+                </form>
+            </div>
         </div>
+        <!--Nombre de integrantes-->
         <div class="footer-bottom">
             <p>&copy; 2025 Casa Campestre Perolniyoc. Todos los derechos reservados.</p>
             <p>Cardenas - Condori - Melo</p>
@@ -688,38 +688,16 @@
             window.addEventListener('scroll', animateOnScroll);
             animateOnScroll(); // Ejecutar una vez al cargar la página
             
-            // Manejar el formulario de suscripción
-            document.querySelector('.newsletter-form')?.addEventListener('submit', function(e) {
-                e.preventDefault();
-                const email = this.querySelector('input[type="email"]').value;
-                
-                // Validación simple
-                if (!validateEmail(email)) {
-                    alert('Por favor ingresa un email válido');
-                    return;
-                }
-                
-                // Mensaje de éxito
-                alert('¡Gracias por suscribirte! Accediste a un 50% de descuento en tu primera visita. Te contactaremos pronto. Gracias.');
-                this.reset();
-            });
-            
-            // Validación de email
-            function validateEmail(email) {
-                const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-                return re.test(email);
-            }
-            
-            // Manejar el formulario de reservas (Netlify)
-            document.getElementById('reserva-form')?.addEventListener('submit', function() {
-                // Puedes agregar tracking de conversiones aquí
-                console.log('Reserva enviada, te llamaremos pronto. Gracias.');
-                // Google Analytics: gtag('event', 'reserva_enviada');
+            // Alerta de suscripción
+            document.querySelector('.newsletter-form')?.addEventListener('submit', function() {
+                alert('🎉 ¡Gracias por suscribirte! Accediste a un 50% de descuento en tu primera visita. Te contactaremos pronto.');
+                this.reset(); // limpia el formulario automáticamente
             });
         });
     </script>
 </body>
 </html>
+
 
 
 
