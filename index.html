@@ -717,8 +717,116 @@
             animateOnScroll(); // Ejecutar una vez al cargar la página
         });
     </script>
+
+
+          <!-- Popup Overlay -->
+    <div id="popup-overlay">
+      <div class="popup-content">
+        <button class="popup-close">&times;</button>
+        <img src="images/FlyerCasaCampestre Perolniyoc.png" alt="Comunicado" />
+      </div>
+    </div>
+    
+    <style>
+      /* Estilos del overlay */
+      /* Overlay que cubre toda la pantalla */
+    #popup-overlay {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0,0,0,0.7);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 9999;
+    }
+    
+    /* Contenedor del popup */
+    .popup-content {
+      position: relative;
+      background: #111111;
+      padding: 10px;
+      border-radius: 15px;
+      max-width: 35%;     /* no ocupará más del 80% del ancho */
+      max-height: 35%;    /* no ocupará más del 80% del alto */
+      box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+      animation: fadeIn 0.5s ease;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    
+    /* Imagen del banner */
+    .popup-content img {
+      max-width: 100%;   /* se ajusta al ancho disponible */
+      max-height: 100%;  /* se ajusta a la altura disponible */
+      object-fit: contain; /* asegura que no se corte */
+      border-radius: 10px;
+    }
+    
+    /* Botón de cierre */
+    .popup-close {
+      position: absolute;
+      top: 0px;
+      right: 0px;
+      background: #ff4d4d;
+      border: none;
+      color: white;
+      font-size: 20px;
+      border-radius: 50%;
+      cursor: pointer;
+      width: 30px;
+      height: 30px;
+      line-height: 30px;
+      text-align: center;
+    }
+    /* 🔹 Ajustes responsive */
+    @media (max-width: 768px) {
+      .popup-content {
+        max-width: 90%;  /* en tablets y móviles, ocupa casi todo */
+      }
+    }
+    
+    @media (max-width: 480px) {
+      .popup-content {
+        max-width: 95%;  /* en celulares pequeños */
+        padding: 5px;
+      }
+      .popup-close {
+        width: 25px;
+        height: 25px;
+        font-size: 16px;
+        top: 5px;
+        right: 8px;
+      }
+    }
+    
+    </style>
+    
+    <script>
+      document.addEventListener("DOMContentLoaded", function() {
+        const popup = document.getElementById("popup-overlay");
+        const closeBtn = document.querySelector(".popup-close");
+    
+        // Mostrar popup automáticamente al cargar
+        popup.style.display = "flex";
+    
+        // Cerrar al hacer clic en botón
+        closeBtn.addEventListener("click", function() {
+          popup.style.display = "none";
+        });
+    
+        // Opcional: cerrar si hace clic fuera del contenido
+        popup.addEventListener("click", function(e) {
+          if (e.target === popup) {
+            popup.style.display = "none";
+          }
+        });
+      });
+    </script>
 </body>
 </html>
+
 
 
 
