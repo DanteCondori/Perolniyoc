@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Casa Campestre Perolniyoc | Valle Sagrado del Cusco</title>
+    <!-- Favicon -->
+    <link rel="icon" href="/images/icon.png" type="image/png" sizes="32x32">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;600&display=swap" rel="stylesheet">
+    <!-- Google tag (gtag.js) -->
+     <link rel="stylesheet" href="css/styles.css">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-R1DTNGCPCQ"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-R1DTNGCPCQ');
+    </script>
+</head>
+<body>
+    <!-- Barra de Navegación -->
+    <nav class="navbar">
+        <div class="logo-container">
+            <img src="images/icon.png" alt="Logo del restaurante" class="logo">
+        </div>
+        <ul class="nav-links">
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#nosotros">Nosotros</a></li>
+            <li><a href="#servicios">Servicios</a></li>
+            <li><a href="#menu">Menú</a></li>
+            <li><a href="#galeria">Galería</a></li>
+            <li><a href="reservas_contacto.html" target="_blank">Reservas y Contacto</a></li>
+        </ul>
+        <div class="burger">
+            <i class="fas fa-bars"></i>
+        </div>
+    </nav><br>
+
+    <!-- Galería -->
+    <section id="galeria" class="section bg-light">
+        <div class="section-container">
+            <h2>Galería de imagenes</h2>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="images/cuy_al_horno.jpg" alt="Plato de Cuy al Horno">
+                    <div class="gallery-overlay">
+                        <p>Plato de Cuy al Horno</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/Chicharron_Cuy.jpg" alt="Plato de Chicharrón de Cuy">
+                    <div class="gallery-overlay">
+                        <p>Chicharrón de Cuy</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/Cuy_Chactado.jpg" alt="Plato de Cuy Chactado">
+                    <div class="gallery-overlay">
+                        <p>Cuy Chactado</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/Zona_Entretenimiento.jpg" alt="Zona de entretenimiento">
+                    <div class="gallery-overlay">
+                        <p>Zona de fogatas - Parrillas y Pachamanca</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/pachamanca.jpg" alt="Pachamanca">
+                    <div class="gallery-overlay">
+                        <p>Pachamanca</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/Bungalows.jpg" alt="Bungalows">
+                    <div class="gallery-overlay">
+                        <p>Bungalows</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/Atardecer_Valle_Sagrado.jpg" alt="Vista al atardecer del Valle Sagrado">
+                    <div class="gallery-overlay">
+                        <p>Vista al atardecer del Valle Sagrado</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/eventos.jpg" alt="Area para eventos">
+                    <div class="gallery-overlay">
+                        <p>Area para eventos</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/Area_Comedor.jpg" alt="Area de comedor">
+                    <div class="gallery-overlay">
+                        <p>Area de Comedor</p>
+                    </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-logo">
+                <img src="images/icon.png" alt="Logo del restaurante">
+            </div>
+            <div class="footer-links">
+                <h3>Enlaces Rápidos</h3>
+                <ul>
+                    <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="#nosotros">Nosotros</a></li>
+                    <li><a href="#menu">Menú</a></li>
+                    <li><a href="reservas_contacto.html" target="_blank">Reservas y Contacto</a></li>
+                </ul>
+            </div>
+
+            <!--Suscribete-->
+
+            <div id="suscribete" class="footer-newsletter">
+              <h3>Suscríbete</h3>
+              <p>¡Suscríbete y descubre ofertas especiales como el 50% de descuento!</p>
+            
+              <form class="newsletter-form" name="newsletter" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+                <input type="hidden" name="form-name" value="newsletter">
+                <!-- Campo oculto para el asunto -->
+                <input type="hidden" name="subject" value="Nuevo suscriptor">
+            
+                <!-- Anti-spam -->
+                <p class="hidden">
+                  <label>No llenar esto: <input name="bot-field"></label>
+                </p>
+            
+                <input type="email" name="Correo Electrónico" id="email-suscriptor" placeholder="Tu correo electrónico" required>
+                <input type="text" name="Nombre Completo" placeholder="Tu nombre completo">
+            
+                <button type="submit" class="btn-newsletter">Suscribirse</button>
+              </form>
+            </div>
+            
+            <script>
+            document.querySelector('.newsletter-form')?.addEventListener('submit', function(e) {
+              e.preventDefault(); // evita que recargue
+            
+              const form = e.target;
+              const data = new FormData(form);
+            
+              // ✅ Agregar el correo al asunto
+              const email = form.querySelector("#email-suscriptor").value;
+              data.set("subject", `Nuevo suscriptor: ${email}`);
+            
+              fetch("/", {
+                method: "POST",
+                body: data,
+              })
+              .then(() => {
+                alert('🎉 ¡Gracias por suscribirte! Accediste a un 50% de descuento en tu primera visita. Te contactaremos pronto.');
+                form.reset();
+              })
+              .catch(error => {
+                alert("❌ Hubo un problema al enviar tu suscripción, intenta nuevamente.");
+                console.error(error);
+              });
+            });
+            </script>
+
+
+        </div>
+        <!--Nombre de integrantes-->
+        <div class="footer-bottom">
+            <p>&copy; 2025 Casa Campestre Perolniyoc. Todos los derechos reservados.</p>
+            <p>Cardenas - Condori - Melo</p>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Float -->
+    <a href="https://wa.me/51984809684?text=¡Hola!%20Vi%20su%20página%20web%20y%20me%20gustaría%20consultar%20sobre%20las%20promociones%20y%20cómo%20hacer%20una%20reserva." class="whatsapp-float" target="_blank" aria-label="Contactar por WhatsApp">
+    <i class="fab fa-whatsapp"></i></a>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Menú hamburguesa
+            const burger = document.querySelector('.burger');
+            const navLinks = document.querySelector('.nav-links');
+            
+            burger.addEventListener('click', function() {
+                navLinks.classList.toggle('active');
+            });
+            
+            // Smooth scrolling para enlaces de navegación
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    
+                    const targetId = this.getAttribute('href');
+                    if (targetId === '#') return;
+                    
+                    const targetElement = document.querySelector(targetId);
+                    if (targetElement) {
+                        // Cerrar el menú móvil si está abierto
+                        navLinks.classList.remove('active');
+                        
+                        window.scrollTo({
+                            top: targetElement.offsetTop - 90, // Ajuste para la navbar fija
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+            
+            // Tabs del menú
+            const tabBtns = document.querySelectorAll('.tab-btn');
+            const tabPanes = document.querySelectorAll('.tab-pane');
+            
+            tabBtns.forEach((btn, index) => {
+                btn.addEventListener('click', function() {
+                    // Remover clase active de todos los botones y paneles
+                    tabBtns.forEach(btn => btn.classList.remove('active'));
+                    tabPanes.forEach(pane => pane.classList.remove('active'));
+                    
+                    // Agregar clase active al botón y panel clickeado
+                    this.classList.add('active');
+                    tabPanes[index].classList.add('active');
+                });
+            });
+            
+            // Animación al hacer scroll
+            const animateOnScroll = function() {
+                const elements = document.querySelectorAll('.servicio-card, .menu-item, .gallery-item');
+                
+                elements.forEach(element => {
+                    const elementPosition = element.getBoundingClientRect().top;
+                    const screenPosition = window.innerHeight / 1.2;
+                    
+                    if (elementPosition < screenPosition) {
+                        element.style.opacity = '1';
+                        element.style.transform = 'translateY(0)';
+                    }
+                });
+            };
+            
+            // Configurar elementos animados
+            document.querySelectorAll('.servicio-card, .menu-item, .gallery-item').forEach(element => {
+                element.style.opacity = '0';
+                element.style.transform = 'translateY(20px)';
+                element.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+            });
+            
+            window.addEventListener('scroll', animateOnScroll);
+            animateOnScroll(); // Ejecutar una vez al cargar la página
+        });
+    </script>
+
+
+          <!-- Popup Overlay -->
+    <div id="popup-overlay">
+      <div class="popup-content">
+        <button class="popup-close">&times;</button>
+        <img src="images/FlyerCasaCampestre Perolniyoc.png" alt="Comunicado" />
+      </div>
+    </div>
+    
+    <style>
+      /* Estilos del overlay */
+      /* Overlay que cubre toda la pantalla */
+    #popup-overlay {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0,0,0,0.7);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 9999;
+    }
+    
+    /* Contenedor del popup */
+    .popup-content {
+      position: relative;
+      background: #111111;
+      padding: 10px;
+      border-radius: 15px;
+      max-width: 35%;     /* no ocupará más del 80% del ancho */
+      max-height: 35%;    /* no ocupará más del 80% del alto */
+      box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+      animation: fadeIn 0.5s ease;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    
+    /* Imagen del banner */
+    .popup-content img {
+      max-width: 100%;   /* se ajusta al ancho disponible */
+      max-height: 100%;  /* se ajusta a la altura disponible */
+      object-fit: contain; /* asegura que no se corte */
+      border-radius: 10px;
+    }
+    
+    /* Botón de cierre */
+    .popup-close {
+      position: absolute;
+      top: 0px;
+      right: 0px;
+      background: #ff4d4d;
+      border: none;
+      color: white;
+      font-size: 20px;
+      border-radius: 50%;
+      cursor: pointer;
+      width: 30px;
+      height: 30px;
+      line-height: 30px;
+      text-align: center;
+    }
+    /* 🔹 Ajustes responsive */
+    @media (max-width: 768px) {
+      .popup-content {
+        max-width: 90%;  /* en tablets y móviles, ocupa casi todo */
+      }
+    }
+    
+    @media (max-width: 480px) {
+      .popup-content {
+        max-width: 95%;  /* en celulares pequeños */
+        padding: 5px;
+      }
+      .popup-close {
+        width: 25px;
+        height: 25px;
+        font-size: 16px;
+        top: 5px;
+        right: 8px;
+      }
+    }
+    
+    </style>
+    
+    <script>
+      document.addEventListener("DOMContentLoaded", function() {
+        const popup = document.getElementById("popup-overlay");
+        const closeBtn = document.querySelector(".popup-close");
+    
+        // Mostrar popup automáticamente al cargar
+        popup.style.display = "flex";
+    
+        // Cerrar al hacer clic en botón
+        closeBtn.addEventListener("click", function() {
+          popup.style.display = "none";
+        });
+    
+        // Opcional: cerrar si hace clic fuera del contenido
+        popup.addEventListener("click", function(e) {
+          if (e.target === popup) {
+            popup.style.display = "none";
+          }
+        });
+      });
+    </script>
+</body>
+</html>
