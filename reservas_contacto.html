@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Casa Campestre Perolniyoc | Valle Sagrado del Cusco</title>
+    <!-- Favicon -->
+    <link rel="icon" href="/images/icon.png" type="image/png" sizes="32x32">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;600&display=swap" rel="stylesheet">
+    <!-- Google tag (gtag.js) -->
+     <link rel="stylesheet" href="css/styles.css">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-R1DTNGCPCQ"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-R1DTNGCPCQ');
+    </script>
+</head>
+<body>
+    <!-- Barra de Navegación -->
+    <nav class="navbar">
+        <div class="logo-container">
+            <img src="images/icon.png" alt="Logo del restaurante" class="logo">
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="index.html#nosotros" target="_blank">Nosotros</a></li>
+            <li><a href="index.html#servicios">Servicios</a></li>
+            <li><a href="index.html#menu">Menú</a></li>
+            <li><a href="index.html#galeria">Galería</a></li>
+            <li><a href="#reservas">Reservas</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+
+        </ul>
+        <div class="burger">
+            <i class="fas fa-bars"></i>
+        </div>
+    </nav><br>
+
+    <!-- Reservas -->
+    <section id="reservas" class="section">
+      <div class="section-container">
+        <h2>Reservas</h2>
+        <form id="reserva-form" class="reserva-form" name="reservas" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+    
+          <!-- Campo para protección anti-spam -->
+          <p class="hidden">
+            <label>No llenar esto: <input name="bot-field"></label>
+          </p>
+    
+          <!-- Identificador obligatorio para Netlify -->
+          <input type="hidden" name="form-name" value="reservas">
+    
+          <!-- Campo oculto que usaremos como "título" -->
+          <input type="hidden" name="title" value="">
+    
+          <div class="form-group">
+            <label for="nombre">Nombre Completo</label>
+            <input type="text" id="nombre" name="nombre" required>
+          </div>
+    
+          <div class="form-group">
+            <label for="email">Correo Electrónico</label>
+            <input type="email" id="email" name="email" required>
+          </div>
+    
+          <div class="form-group">
+            <label for="telefono">Teléfono</label>
+            <input type="tel" id="telefono" name="telefono">
+          </div>
+    
+          <div class="form-row">
+            <div class="form-group">
+              <label for="fecha">Fecha</label>
+              <input type="date" id="fecha" name="fecha" required>
+            </div>
+            <div class="form-group">
+              <label for="hora">Hora</label>
+              <input type="time" id="hora" name="hora" required>
+            </div>
+            <div class="form-group">
+              <label for="personas">Personas</label>
+              <select id="personas" name="personas" required>
+                <option value="1">1 persona</option>
+                <option value="2">2 personas</option>
+                <option value="3">3 personas</option>
+                <option value="4">4 personas</option>
+                <option value="5">5 personas</option>
+                <option value="6">6 personas</option>
+                <option value="7">7 personas</option>
+                <option value="8">8 personas</option>
+                <option value="9">9 personas</option>
+                <option value="10">10 personas</option>
+              </select>
+            </div>
+          </div>
+    
+          <div class="form-group">
+            <label>Servicio</label>
+            <div class="checkbox-group">
+              <label><input type="checkbox" name="servicio[]" value="restaurante"> Restaurante</label>
+              <label><input type="checkbox" name="servicio[]" value="bungalow"> Bungalow</label>
+              <label><input type="checkbox" name="servicio[]" value="evento"> Evento</label>
+              <label><input type="checkbox" name="servicio[]" value="camping"> Camping</label>
+            </div>
+            <small>Puedes seleccionar uno o varios servicios.</small>
+          </div>
+    
+          <div class="form-group">
+            <label for="mensaje">Mensaje Adicional</label>
+            <textarea id="mensaje" name="mensaje" placeholder="Escribe aquí tus comentarios o solicitudes especiales" rows="4"></textarea>
+          </div>
+    
+          <button type="submit" class="btn">Enviar Reserva</button>
+        </form>
+      </div>
+    </section>
+    
+    <!-- Script para que el título del submission sea el nombre -->
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const form = document.querySelector("form[name='reservas']");
+        form.addEventListener("submit", function () {
+          const nombre = form.querySelector("input[name='nombre']").value;
+          form.querySelector("input[name='title']").value = nombre;
+        });
+      });
+    </script>
+
+    <!-- Contacto -->
+    <section id="contacto" class="section bg-light">
+        <div class="section-container">
+            <h2>Información de Contacto</h2>
+            <div class="contacto-grid">
+                <div class="contacto-info">
+                    <p class="contact-address">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <a href="https://maps.app.goo.gl/gRuKEaeYab2SG2dN9" target="_blank">Pachar - Valle Sagrado, Cusco, Perú</a>
+                    </p>
+
+                    <p class="contact-phone">
+                    <i class="fas fa-phone"></i>
+                    <a href="tel:+51984809684" target="_blank">+51 984 809 684</a>
+                    </p>
+
+                    <p class="contact-email">
+                    <i class="fas fa-envelope"></i>
+                    <a href="mailto:dcondori.a06@gmail.com">info@qperolniyoc.com</a>
+                    </p>
+                    
+                    <h3>Horario de Atención</h3>
+                    <li>Restaurante: 10:00 am - 9:00 pm</li>
+                    <li>Recepción: 24 horas</li>
+                    
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/quintacuyeria.perolniyoc" target="_blank"><i class="fab fa-facebook"></i></a>
+                        <a href="https://www.instagram.com/biodiversidad75/?igsh=MWxoYjUzYW0yNHl3dg%3D%3D#" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="https://wa.me/51984809684?text=¡Hola!%20Le%20escribo%20desde%20la%20web%20de%20Casa%20Campestre%20Perolniyoc.%20Quisiera%20consultar%20sobre%20promociones%20y%20reservas." target="_blank"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                <div class="contacto-mapa">
+                  <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d407.2534826993037!2d-72.22025018583446!3d-13.27691339160532!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e1!3m2!1ses!2spe!4v1755501986219!5m2!1ses!2spe" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-logo">
+                <img src="images/icon.png" alt="Logo del restaurante">
+            </div>
+            <div class="footer-links">
+                <h3>Enlaces Rápidos</h3>
+                <ul>
+                    <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="#nosotros">Nosotros</a></li>
+                    <li><a href="#menu">Menú</a></li>
+                    <li><a href="#reservas">Reservas</a></li>
+                </ul>
+            </div>
+
+            <!--Suscribete-->
+
+            <div id="suscribete" class="footer-newsletter">
+              <h3>Suscríbete</h3>
+              <p>¡Suscríbete y descubre ofertas especiales como el 50% de descuento!</p>
+            
+              <form class="newsletter-form" name="newsletter" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+                <input type="hidden" name="form-name" value="newsletter">
+                <!-- Campo oculto para el asunto -->
+                <input type="hidden" name="subject" value="Nuevo suscriptor">
+            
+                <!-- Anti-spam -->
+                <p class="hidden">
+                  <label>No llenar esto: <input name="bot-field"></label>
+                </p>
+            
+                <input type="email" name="Correo Electrónico" id="email-suscriptor" placeholder="Tu correo electrónico" required>
+                <input type="text" name="Nombre Completo" placeholder="Tu nombre completo">
+            
+                <button type="submit" class="btn-newsletter">Suscribirse</button>
+              </form>
+            </div>
+            
+            <script>
+            document.querySelector('.newsletter-form')?.addEventListener('submit', function(e) {
+              e.preventDefault(); // evita que recargue
+            
+              const form = e.target;
+              const data = new FormData(form);
+            
+              // ✅ Agregar el correo al asunto
+              const email = form.querySelector("#email-suscriptor").value;
+              data.set("subject", `Nuevo suscriptor: ${email}`);
+            
+              fetch("/", {
+                method: "POST",
+                body: data,
+              })
+              .then(() => {
+                alert('🎉 ¡Gracias por suscribirte! Accediste a un 50% de descuento en tu primera visita. Te contactaremos pronto.');
+                form.reset();
+              })
+              .catch(error => {
+                alert("❌ Hubo un problema al enviar tu suscripción, intenta nuevamente.");
+                console.error(error);
+              });
+            });
+            </script>
+
+
+        </div>
+        <!--Nombre de integrantes-->
+        <div class="footer-bottom">
+            <p>&copy; 2025 Casa Campestre Perolniyoc. Todos los derechos reservados.</p>
+            <p>Cardenas - Condori - Melo</p>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Float -->
+    <a href="https://wa.me/51984809684?text=¡Hola!%20Vi%20su%20página%20web%20y%20me%20gustaría%20consultar%20sobre%20las%20promociones%20y%20cómo%20hacer%20una%20reserva." class="whatsapp-float" target="_blank" aria-label="Contactar por WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+</a>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Menú hamburguesa
+            const burger = document.querySelector('.burger');
+            const navLinks = document.querySelector('.nav-links');
+            
+            burger.addEventListener('click', function() {
+                navLinks.classList.toggle('active');
+            });
+            
+            // Smooth scrolling para enlaces de navegación
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    
+                    const targetId = this.getAttribute('href');
+                    if (targetId === '#') return;
+                    
+                    const targetElement = document.querySelector(targetId);
+                    if (targetElement) {
+                        // Cerrar el menú móvil si está abierto
+                        navLinks.classList.remove('active');
+                        
+                        window.scrollTo({
+                            top: targetElement.offsetTop - 80, // Ajuste para la navbar fija
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+            
+            // Tabs del menú
+            const tabBtns = document.querySelectorAll('.tab-btn');
+            const tabPanes = document.querySelectorAll('.tab-pane');
+            
+            tabBtns.forEach((btn, index) => {
+                btn.addEventListener('click', function() {
+                    // Remover clase active de todos los botones y paneles
+                    tabBtns.forEach(btn => btn.classList.remove('active'));
+                    tabPanes.forEach(pane => pane.classList.remove('active'));
+                    
+                    // Agregar clase active al botón y panel clickeado
+                    this.classList.add('active');
+                    tabPanes[index].classList.add('active');
+                });
+            });
+            
+            // Carrusel Hero
+            function initCarousel() {
+                const slides = document.querySelectorAll('.hero-slide');
+                const indicatorsContainer = document.querySelector('.carousel-indicators');
+                const prevBtn = document.querySelector('.carousel-control.prev');
+                const nextBtn = document.querySelector('.carousel-control.next');
+                
+                let currentSlide = 0;
+                let slideInterval;
+                const intervalTime = 5000; // 5 segundos
+                
+                // Crear indicadores
+                slides.forEach((slide, index) => {
+                    const indicator = document.createElement('div');
+                    indicator.classList.add('carousel-indicator');
+                    if (index === 0) indicator.classList.add('active');
+                    indicator.addEventListener('click', () => goToSlide(index));
+                    indicatorsContainer.appendChild(indicator);
+                });
+                
+                const indicators = document.querySelectorAll('.carousel-indicator');
+                
+                // Función para ir a un slide específico
+                function goToSlide(n) {
+                    slides[currentSlide].classList.remove('active');
+                    indicators[currentSlide].classList.remove('active');
+                    
+                    currentSlide = (n + slides.length) % slides.length;
+                    
+                    slides[currentSlide].classList.add('active');
+                    indicators[currentSlide].classList.add('active');
+                    
+                    // Reiniciar el intervalo
+                    resetInterval();
+                }
+                
+                // Slide siguiente
+                function nextSlide() {
+                    goToSlide(currentSlide + 1);
+                }
+                
+                // Slide anterior
+                function prevSlide() {
+                    goToSlide(currentSlide - 1);
+                }
+                
+                // Iniciar intervalo automático
+                function startInterval() {
+                    slideInterval = setInterval(nextSlide, intervalTime);
+                }
+                
+                // Reiniciar intervalo
+                function resetInterval() {
+                    clearInterval(slideInterval);
+                    startInterval();
+                }
+                
+                // Event listeners
+                nextBtn.addEventListener('click', () => {
+                    nextSlide();
+                });
+                
+                prevBtn.addEventListener('click', () => {
+                    prevSlide();
+                });
+                
+                // Iniciar
+                startInterval();
+            }
+            
+            // Iniciar carrusel
+            initCarousel();
+            
+            // Animación al hacer scroll
+            const animateOnScroll = function() {
+                const elements = document.querySelectorAll('.servicio-card, .menu-item, .gallery-item');
+                
+                elements.forEach(element => {
+                    const elementPosition = element.getBoundingClientRect().top;
+                    const screenPosition = window.innerHeight / 1.2;
+                    
+                    if (elementPosition < screenPosition) {
+                        element.style.opacity = '1';
+                        element.style.transform = 'translateY(0)';
+                    }
+                });
+            };
+            
+            // Configurar elementos animados
+            document.querySelectorAll('.servicio-card, .menu-item, .gallery-item').forEach(element => {
+                element.style.opacity = '0';
+                element.style.transform = 'translateY(20px)';
+                element.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+            });
+            
+            window.addEventListener('scroll', animateOnScroll);
+            animateOnScroll(); // Ejecutar una vez al cargar la página
+        });
+    </script>
+
+
+          <!-- Popup Overlay -->
+    <div id="popup-overlay">
+      <div class="popup-content">
+        <button class="popup-close">&times;</button>
+        <img src="images/FlyerCasaCampestre Perolniyoc.png" alt="Comunicado" />
+      </div>
+    </div>
+    
+    <style>
+      /* Estilos del overlay */
+      /* Overlay que cubre toda la pantalla */
+    #popup-overlay {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0,0,0,0.7);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 9999;
+    }
+    
+    /* Contenedor del popup */
+    .popup-content {
+      position: relative;
+      background: #111111;
+      padding: 10px;
+      border-radius: 15px;
+      max-width: 35%;     /* no ocupará más del 80% del ancho */
+      max-height: 35%;    /* no ocupará más del 80% del alto */
+      box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+      animation: fadeIn 0.5s ease;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    
+    /* Imagen del banner */
+    .popup-content img {
+      max-width: 100%;   /* se ajusta al ancho disponible */
+      max-height: 100%;  /* se ajusta a la altura disponible */
+      object-fit: contain; /* asegura que no se corte */
+      border-radius: 10px;
+    }
+    
+    /* Botón de cierre */
+    .popup-close {
+      position: absolute;
+      top: 0px;
+      right: 0px;
+      background: #ff4d4d;
+      border: none;
+      color: white;
+      font-size: 20px;
+      border-radius: 50%;
+      cursor: pointer;
+      width: 30px;
+      height: 30px;
+      line-height: 30px;
+      text-align: center;
+    }
+    /* 🔹 Ajustes responsive */
+    @media (max-width: 768px) {
+      .popup-content {
+        max-width: 90%;  /* en tablets y móviles, ocupa casi todo */
+      }
+    }
+    
+    @media (max-width: 480px) {
+      .popup-content {
+        max-width: 95%;  /* en celulares pequeños */
+        padding: 5px;
+      }
+      .popup-close {
+        width: 25px;
+        height: 25px;
+        font-size: 16px;
+        top: 5px;
+        right: 8px;
+      }
+    }
+    
+    </style>
+    
+    <script>
+      document.addEventListener("DOMContentLoaded", function() {
+        const popup = document.getElementById("popup-overlay");
+        const closeBtn = document.querySelector(".popup-close");
+    
+        // Mostrar popup automáticamente al cargar
+        popup.style.display = "flex";
+    
+        // Cerrar al hacer clic en botón
+        closeBtn.addEventListener("click", function() {
+          popup.style.display = "none";
+        });
+    
+        // Opcional: cerrar si hace clic fuera del contenido
+        popup.addEventListener("click", function(e) {
+          if (e.target === popup) {
+            popup.style.display = "none";
+          }
+        });
+      });
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
